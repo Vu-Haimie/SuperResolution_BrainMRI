@@ -8,7 +8,7 @@ Dự án này sử dụng mô hình học sâu (SRDenseNet) để **phục hồi
 
 | Ảnh gốc (Low-Res) | Nội suy Bicubic | Kết quả từ SRDenseNet |
 |-------------------|------------------|------------------------|
-| ![Low](brain_img\3.jpg) | ![Bicubic](brain_img\3_bicubic_x4.jpg) | ![SR](brain_img\3_srdensenet_x4.jpg) |
+| ![Low](brain_img/3.jpg) | ![Bicubic](brain_img/3_bicubic_x4.jpg) | ![SR](brain_img/3_srdensenet_x4.jpg) |
 
 ---
 
