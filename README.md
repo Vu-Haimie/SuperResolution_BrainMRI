@@ -6,7 +6,7 @@ Dự án này sử dụng mô hình học sâu (SRDenseNet) để **phục hồi
 
 ## 📸 Kết quả minh họa
 
-| Ảnh gốc (Low-Res) | Nội suy Bicubic | Kết quả từ SRDenseNet |
+| Ảnh gốc (High-Res) | Nội suy Bicubic | Kết quả từ SRDenseNet |
 |-------------------|------------------|------------------------|
 | ![Low](brain_img/3.jpg) | ![Bicubic](brain_img/3_bicubic_x4.jpg) | ![SR](brain_img/3_srdensenet_x4.jpg) |
 
@@ -38,25 +38,9 @@ SuperResolution_BrainMRI/
 
 ---
 
-## 🛠 Cài đặt
-
-\`\`\`bash
-git clone https://github.com/Vu_Haimie/SuperResolution_BrainMRI.git
-cd SuperResolution_BrainMRI
-\`\`\`
-
-> 📌 Đảm bảo bạn đã cài Python và pip trước đó.
-
----
-
 ## ▶️ Cách sử dụng
 
-\`\`\`bash
-python test.py \
-  --weights-file model/SR_MRI.pth \
-  --image-file brain_img/1.jpg \
-  --scale 4
-\`\`\`
+python test.py --weights-file model/SR_MRI.pth --image-file brain_img/1.jpg --scale 4
 
 > Lệnh trên sẽ tạo ra các ảnh mới như `1_bicubic_x4.jpg`, `1_srdensenet_x4.jpg` và in ra chỉ số PSNR.
 
