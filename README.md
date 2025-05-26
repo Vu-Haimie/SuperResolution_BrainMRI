@@ -26,6 +26,7 @@ SuperResolution_BrainMRI/
 ├── brain_img/             # Ảnh đầu vào và kết quả
 ├── model/
 │   └── SR_MRI.pth         # Trọng số mô hình
+├── graph.py              # Đánh giá kết quả và vẽ biểu đồ
 ├── models.py              # Định nghĩa mô hình SRDenseNet
 ├── prepare.py             # Tiền xử lý ảnh huấn luyện
 ├── test.py                # Script kiểm tra mô hình
