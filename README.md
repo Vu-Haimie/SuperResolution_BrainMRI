@@ -15,9 +15,7 @@ Dự án này sử dụng mô hình học sâu (SRDenseNet) để **phục hồi
 ## 🚀 Tính năng nổi bật
 
 - 🔍 Tăng cường độ phân giải ảnh y tế (MRI, grayscale)
-- 📈 Đánh giá chất lượng ảnh bằng PSNR
-- 💻 Giao diện dòng lệnh đơn giản, dễ dùng
-- ⚡ Tối ưu cho cả CPU và GPU với PyTorch
+- 📈 Đánh giá chất lượng ảnh bằng PSNR và SSIM
 
 ---
 
