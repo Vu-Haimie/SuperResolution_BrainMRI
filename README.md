@@ -23,9 +23,11 @@ Dự án này sử dụng mô hình học sâu (SRDenseNet) để **phục hồi
 
 ```
 SuperResolution_BrainMRI/
-├── brain_img/             # Ảnh đầu vào và kết quả
+├── brain_img/             # Ảnh cho README
+├── data/                  # Ảnh đầu vào 
 ├── model/
 │   └── SR_MRI.pth         # Trọng số mô hình
+├── outputs/               # Ảnh đầu ra
 ├── graph.py               # Đánh giá kết quả và vẽ biểu đồ
 ├── models.py              # Định nghĩa mô hình SRDenseNet
 ├── prepare.py             # Tiền xử lý ảnh huấn luyện
