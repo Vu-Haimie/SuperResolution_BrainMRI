@@ -67,7 +67,8 @@ python test.py --weights-file model/SR_MRI.pth --image-file brain_img/1.jpg --sc
 
 ## 📊 Chỉ số đánh giá
 
-- **PSNR (Peak Signal-to-Noise Ratio)**: Đo chất lượng ảnh phục hồi so với ảnh gốc.
+- **PSNR (Peak Signal-to-Noise Ratio)**: Đo lường mức độ khác biệt tuyệt đối về điểm ảnh giữa hai ảnh. Dựa trên chênh lệch bình phương trung bình (MSE) giữa ảnh gốc và ảnh tái tạo.
+- **SSIM (Structural Similarity Index)**: Đo lường mức độ tương đồng về cấu trúc giữa hai ảnh. Phản ánh độ sắc nét, độ tương phản, và cấu trúc – tương đồng hơn với cảm nhận thị giác con người.
 - Hàm tính PSNR được định nghĩa trong `utils.py`.
 
 ---
