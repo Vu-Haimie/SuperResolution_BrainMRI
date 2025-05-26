@@ -12,7 +12,7 @@ Dự án này sử dụng mô hình học sâu (SRDenseNet) để **phục hồi
 
 ---
 
-## 🚀 Tính năng nổi bật
+## 🚀 Tính năng
 
 - 🔍 Tăng cường độ phân giải ảnh y tế (MRI, grayscale)
 - 📈 Đánh giá chất lượng ảnh bằng PSNR và SSIM
@@ -24,9 +24,6 @@ Dự án này sử dụng mô hình học sâu (SRDenseNet) để **phục hồi
 ```
 SuperResolution_BrainMRI/
 ├── brain_img/             # Ảnh đầu vào và kết quả
-│   ├── 1.jpg
-│   ├── 1_bicubic_x4.jpg
-│   └── 1_srdensenet_x4.jpg
 ├── model/
 │   └── SR_MRI.pth         # Trọng số mô hình
 ├── models.py              # Định nghĩa mô hình SRDenseNet
