@@ -7,7 +7,7 @@ Dự án này sử dụng mô hình học sâu (SRDenseNet) để **phục hồi
 ## 📸 Kết quả minh họa
 
 | Ảnh gốc (High-Res) | Nội suy Bicubic | Kết quả từ SRDenseNet |
-|-------------------|------------------|------------------------|
+|--------------------|------------------|------------------------|
 | ![Low](brain_img/3.jpg) | ![Bicubic](brain_img/3_bicubic_x4.jpg) | ![SR](brain_img/3_srdensenet_x4.jpg) |
 
 ---
@@ -23,32 +23,51 @@ Dự án này sử dụng mô hình học sâu (SRDenseNet) để **phục hồi
 
 ## 📁 Cấu trúc thư mục
 
-\`\`\`
+```
 SuperResolution_BrainMRI/
-├── brain_img/             # Thư mục chứa ảnh đầu vào
-├── model/                 
-│   └── SR_MRI.pth         # Trọng số mô hình đã huấn luyện
+├── brain_img/             # Ảnh đầu vào và kết quả
+│   ├── 1.jpg
+│   ├── 1_bicubic_x4.jpg
+│   └── 1_srdensenet_x4.jpg
+├── model/
+│   └── SR_MRI.pth         # Trọng số mô hình
 ├── models.py              # Định nghĩa mô hình SRDenseNet
-├── prepare.py             # Chuẩn bị ảnh huấn luyện 
-├── test.py                # Tập lệnh chính để chạy mô hình
-├── train.py               # Huấn luyện mô hình SRDenseNet
-├── utils.py               # Các hàm tiện ích (tiền xử lý, PSNR, ...)
-└── README.md
-\`\`\`
+├── prepare.py             # Tiền xử lý ảnh huấn luyện
+├── test.py                # Script kiểm tra mô hình
+├── train.py               # Script huấn luyện mô hình
+├── utils.py               # Hàm tiện ích (PSNR, xử lý ảnh, ...)
+└── README.md              # Tài liệu mô tả
+```
+
+---
+
+## 🛠 Cài đặt
+
+```bash
+git clone https://github.com/Vu_Haimie/SuperResolution_BrainMRI.git
+cd SuperResolution_BrainMRI
+pip install -r requirements.txt  # nếu có
+```
+
+> 📌 Yêu cầu Python >= 3.7 và pip.
 
 ---
 
 ## ▶️ Cách sử dụng
 
-python test.py --weights-file model/SR_MRI.pth --image-file brain_img/1.jpg --scale 4
+Chạy lệnh sau (một dòng):
 
-> Lệnh trên sẽ tạo ra các ảnh mới như `1_bicubic_x4.jpg`, `1_srdensenet_x4.jpg` và in ra chỉ số PSNR.
+```bash
+python test.py --weights-file model/SR_MRI.pth --image-file brain_img/1.jpg --scale 4
+```
+
+> Kết quả: tạo ra các ảnh như `1_bicubic_x4.jpg`, `1_srdensenet_x4.jpg`, và in ra chỉ số PSNR.
 
 ---
 
 ## 📊 Chỉ số đánh giá
 
-- **PSNR (Peak Signal-to-Noise Ratio)**: Được dùng để đo độ tương đồng giữa ảnh gốc và ảnh phục hồi.
-- Hàm được cài trong `utils.py`.
+- **PSNR (Peak Signal-to-Noise Ratio)**: Đo chất lượng ảnh phục hồi so với ảnh gốc.
+- Hàm tính PSNR được định nghĩa trong `utils.py`.
 
 ---
